@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AuthRouterProtocol: AnyObject {
-    
+    func navigateToMainApp()
 }
 
 class AuthRouter {
@@ -18,18 +18,14 @@ class AuthRouter {
     static func createModule()->UIViewController{
 
         let view = AuthViewController()
-
         let interactor = AuthInteractor()
         let router = AuthRouter()
-        let service = AuthService()
         
         let presenter = AuthPresenter(interface: view, interactor: interactor, router: router)
         
         
         view.presenter = presenter
         interactor.presenter = presenter
-        interactor.service = service
-        service.interactor = interactor
         router.viewController = view
         
         return view
@@ -38,7 +34,11 @@ class AuthRouter {
 }
 
 extension AuthRouter: AuthRouterProtocol {
-    
+    func navigateToMainApp() {
+           let mainTabBarController = MainTabBarController()
+           mainTabBarController.modalPresentationStyle = .fullScreen
+           viewController?.present(mainTabBarController, animated: true, completion: nil)
+       }
 }
     
     

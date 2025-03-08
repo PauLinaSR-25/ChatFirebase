@@ -11,7 +11,6 @@ import Foundation
 protocol ProfileInteractorInputProtocol: AnyObject {
     //Presenter -> Interactor
     var presenter: ProfileInteractorOutputProtocol? {get set}
-    var service: ProfileServiceInputProtocol? { get set }
 }
 
 
@@ -21,11 +20,5 @@ protocol ProfileInteractorOutputProtocol: AnyObject {
 
 class ProfileInteractor: ProfileInteractorInputProtocol {
     weak var presenter: ProfileInteractorOutputProtocol?
-     var service: ProfileServiceInputProtocol?
     
 }
-
-
-extension ProfileInteractor: ProfileServiceOutputProtocol {
-
-} 

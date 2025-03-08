@@ -11,7 +11,6 @@ import Foundation
 protocol ConversationsInteractorInputProtocol: AnyObject {
     //Presenter -> Interactor
     var presenter: ConversationsInteractorOutputProtocol? {get set}
-    var service: ConversationsServiceInputProtocol? { get set }
 }
 
 
@@ -21,11 +20,5 @@ protocol ConversationsInteractorOutputProtocol: AnyObject {
 
 class ConversationsInteractor: ConversationsInteractorInputProtocol {
     weak var presenter: ConversationsInteractorOutputProtocol?
-     var service: ConversationsServiceInputProtocol?
     
 }
-
-
-extension ConversationsInteractor: ConversationsServiceOutputProtocol {
-
-} 

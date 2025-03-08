@@ -11,7 +11,6 @@ import Foundation
 protocol ChatInteractorInputProtocol: AnyObject {
     //Presenter -> Interactor
     var presenter: ChatInteractorOutputProtocol? {get set}
-    var service: ChatServiceInputProtocol? { get set }
 }
 
 
@@ -21,11 +20,5 @@ protocol ChatInteractorOutputProtocol: AnyObject {
 
 class ChatInteractor: ChatInteractorInputProtocol {
     weak var presenter: ChatInteractorOutputProtocol?
-     var service: ChatServiceInputProtocol?
     
 }
-
-
-extension ChatInteractor: ChatServiceOutputProtocol {
-
-} 
