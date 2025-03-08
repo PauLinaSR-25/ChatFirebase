@@ -15,7 +15,6 @@ class MainTabBarController: UITabBarController {
     }
     
     private func setupTabs() {
-        
         let conversationsVC = ConversationsRouter.createModule()
         let profileVC = ProfileRouter.createModule()
         

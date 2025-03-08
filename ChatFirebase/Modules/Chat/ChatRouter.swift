@@ -18,9 +18,6 @@ class ChatRouter {
     static func createModule()->UIViewController{
 
         let view = ChatViewController()
-        view.modalTransitionStyle = .crossDissolve
-        view.modalPresentationStyle = .overCurrentContext
-        
         let interactor = ChatInteractor()
         let router = ChatRouter()
         
