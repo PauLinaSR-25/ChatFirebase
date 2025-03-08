@@ -36,7 +36,7 @@ class ConversationsRouter {
 extension ConversationsRouter: ConversationsRouterProtocol {
     func navigateToNewChat() {
         let vc = ChatRouter.createModule()
-        vc.modalPresentationStyle = .automatic
+        vc.modalPresentationStyle = .fullScreen
         viewController?.present(vc, animated: true)
     }
 }
