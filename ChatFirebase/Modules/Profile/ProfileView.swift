@@ -31,6 +31,10 @@ final class ProfileView: UIView {
        let updateButton: UIButton = {
            let button = UIButton(type: .system)
            button.setTitle("Actualizar Perfil", for: .normal)
+           button.backgroundColor = .toastSuccessText
+           button.layer.cornerRadius = 4
+           button.setTitleColor(.white, for: .normal)
+           button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
            return button
        }()
     

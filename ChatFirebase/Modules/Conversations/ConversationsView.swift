@@ -20,6 +20,10 @@ final class ConversationsView: UIView {
        let newChatButton: UIButton = {
            let button = UIButton(type: .system)
            button.setTitle("Nuevo Chat", for: .normal)
+           button.backgroundColor = .toastSuccessText
+           button.layer.cornerRadius = 10
+           button.setTitleColor(.white, for: .normal)
+           button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
            button.translatesAutoresizingMaskIntoConstraints = false
            return button
        }()
@@ -48,12 +52,12 @@ extension ConversationsView {
             tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tableView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.8),
+            tableView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.9),
             
-            newChatButton.bottomAnchor.constraint(equalTo: tableView.bottomAnchor, constant: -6),
-            newChatButton.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            newChatButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -12),
+            newChatButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             newChatButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8),
-            newChatButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.12)
+            newChatButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.08)
         ])
         
         tableView.delegate = self

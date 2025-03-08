@@ -15,10 +15,9 @@ class MainTabBarController: UITabBarController {
     }
     
     private func setupTabs() {
-        view.translatesAutoresizingMaskIntoConstraints = false
         
-        let conversationsVC = ConversationsViewController()
-        let profileVC = ProfileViewController()
+        let conversationsVC = ConversationsRouter.createModule()
+        let profileVC = ProfileRouter.createModule()
         
         conversationsVC.tabBarItem = UITabBarItem(title: "Chats", image: UIImage(systemName: "message.fill"), tag: 0)
         profileVC.tabBarItem = UITabBarItem(title: "Perfil", image: UIImage(systemName: "person.fill"), tag: 1)

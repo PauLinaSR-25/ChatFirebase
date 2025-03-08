@@ -11,6 +11,8 @@ import Foundation
 //Presenter
 protocol ConversationsPresenterProtocol: AnyObject {
     var interactor: ConversationsInteractorInputProtocol? {get set}
+    
+    func navigateToNewChat()
 }
 
 class ConversationsPresenter {
@@ -28,6 +30,10 @@ class ConversationsPresenter {
 }
 
 extension ConversationsPresenter: ConversationsPresenterProtocol {
+    func navigateToNewChat() {
+        router.navigateToNewChat()
+    }
+    
     
 }
 

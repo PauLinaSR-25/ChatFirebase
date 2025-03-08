@@ -3,7 +3,7 @@
 //  ChatFirebase
 //
 //  Created by Paulina Sanchez Salazar on 07/03/25.
-//  
+//
 //
 
 import UIKit
@@ -30,16 +30,20 @@ final class AuthView: UIView {
     let loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Iniciar sesión", for: .normal)
+        button.backgroundColor = .toastSuccessText
+        button.layer.cornerRadius = 10
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         return button
     }()
     
     //MARK: - init
     init() {
         super.init(frame: .zero)
-       
+        
         setup()
     }
-   
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

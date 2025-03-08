@@ -30,6 +30,7 @@ class ConversationsViewController: UIViewController {
     
     @objc private func didTapNewChat() {
         print("Open new chat...")
+        presenter?.navigateToNewChat()
     }
 }
 

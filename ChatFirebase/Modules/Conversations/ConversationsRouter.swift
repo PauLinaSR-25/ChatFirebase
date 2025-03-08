@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ConversationsRouterProtocol: AnyObject {
-    
+    func navigateToNewChat()
 }
 
 class ConversationsRouter {
@@ -34,7 +34,11 @@ class ConversationsRouter {
 }
 
 extension ConversationsRouter: ConversationsRouterProtocol {
-    
+    func navigateToNewChat() {
+        let vc = ChatRouter.createModule()
+        
+        viewController?.present(ChatRouter.createModule(), animated: true)
+    }
 }
     
     
