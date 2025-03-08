@@ -18,21 +18,21 @@ class AuthViewController: UIViewController {
     var presenter: AuthPresenterProtocol?
     
     private let contentView: AuthView = AuthView()
-
+    
     override func loadView() {
         super.loadView()
         view = contentView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView.loginButton.addTarget(self, action: #selector(didTapLogin), for: .touchUpInside)
     }
-        
-        @objc private func didTapLogin() {
-            print("Loading login...")
-            presenter?.login(email: contentView.getEmail(), password: contentView.getPassword())
-        }
+    
+    @objc private func didTapLogin() {
+        print("Loading login...")
+        presenter?.login(email: contentView.getEmail(), password: contentView.getPassword())
+    }
 }
 
 extension AuthViewController: AuthViewProtocol {

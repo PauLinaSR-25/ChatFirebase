@@ -45,15 +45,17 @@ class AuthInteractor: AuthInteractorInputProtocol {
             return
         }
         
-        self.login(email: email, password: password) { [weak self] result in
-            switch result {
-            case .success(let user):
-                self?.userDefaultsService.saveUser(user)
-                self?.presenter?.navigateToMainApp()
-            case .failure(let error):
-                self?.presenter?.showError(message: "Error en el login: \(error.localizedDescription)")
-            }
-        }
+//        self.login(email: email, password: password) { [weak self] result in
+//            switch result {
+//            case .success(let user):
+//                self?.userDefaultsService.saveUser(user)
+//                self?.presenter?.navigateToMainApp()
+//            case .failure(let error):
+//                self?.presenter?.showError(message: "Error en el login: \(error.localizedDescription)")
+//            }
+//        }
+        
+        self.presenter?.navigateToMainApp()
     }
 }
 

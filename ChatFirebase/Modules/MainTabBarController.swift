@@ -15,6 +15,8 @@ class MainTabBarController: UITabBarController {
     }
     
     private func setupTabs() {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
         let conversationsVC = ConversationsViewController()
         let profileVC = ProfileViewController()
         
