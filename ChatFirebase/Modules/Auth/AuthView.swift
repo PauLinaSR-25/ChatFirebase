@@ -51,7 +51,6 @@ final class AuthView: UIView {
 
 extension AuthView {
     private func setup() {
-        translatesAutoresizingMaskIntoConstraints = false
         
         let stackView = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, loginButton])
         stackView.axis = .vertical

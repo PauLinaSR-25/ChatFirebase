@@ -52,7 +52,6 @@ final class ProfileView: UIView {
 
 extension ProfileView {
     private func setup() {
-        translatesAutoresizingMaskIntoConstraints = false
         
         let stackView = UIStackView(arrangedSubviews: [profileImageView, nameTextField, updateButton])
         stackView.axis = .vertical

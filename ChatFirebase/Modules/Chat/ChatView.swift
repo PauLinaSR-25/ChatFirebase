@@ -49,7 +49,6 @@ final class ChatView: UIView {
 
 extension ChatView {
     private func setup() {
-        translatesAutoresizingMaskIntoConstraints = false
         
         addSubview(tableView)
         

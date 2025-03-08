@@ -42,7 +42,6 @@ final class ConversationsView: UIView {
 
 extension ConversationsView {
     private func setup() {
-        translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .contentBackground
         
         addSubview(tableView)
@@ -54,7 +53,7 @@ extension ConversationsView {
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
             tableView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.9),
             
-            newChatButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -12),
+            newChatButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -12),
             newChatButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             newChatButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8),
             newChatButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.08)
